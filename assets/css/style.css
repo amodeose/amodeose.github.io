@@ -1,5 +1,5 @@
 * {
-    font-family: Arial;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 /*  ELEMENTS  */
@@ -18,6 +18,7 @@ body {
 h1 {
     color: #47ACA7;
     font-size: 2em;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
 h2 {
@@ -25,6 +26,7 @@ h2 {
     margin-right:15px;
     color: #47ACA7;
     font-size: 1.6em;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
 h3 {
@@ -35,13 +37,14 @@ h3 {
     background-color: white;;
     color: black;
     font-size: 1.1em;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
 p {
     line-height: 1.5;
     display: inline-block;
     margin-top:10px;
-    color: 	grey;
+    color: 	#777777;
 }
 
 hr {
@@ -60,7 +63,7 @@ img {
 }
 
 form {
-    color: grey;
+    color: #777777;
 }
 
 input {
@@ -78,6 +81,10 @@ button {
     margin-top: 15px;
 }
 
+button:hover {
+    color: #777777;
+}
+
 textarea {
     width: 100%;
     margin: 10px 0;
@@ -90,14 +97,30 @@ grid {
     margin-top: 25px;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 250px);
+    grid-template-rows: repeat(2, 250px);
     grid-gap: 20px;
+}
+
+footer {
+    background-color: #666666;
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    border-top: 5px solid #47ACA7;
+}
+
+footer p {
+    font-size: 0.5em;
+    width: 45px;
+    color: lightgrey;   
+    margin: 20px 48%;
 }
 
 /* CLASSES */
 
 .headerContent {
-    width: 960px;
+    width: 80%;
     margin: 0 auto;
   
 }
@@ -119,13 +142,18 @@ grid {
     padding: 20px;
 }
 
+.nav h2:hover {
+    color: #777777;
+}
+
 .page {
-    width: 960px;
+    width: 80%;
     background-color: white;
     margin: 0 auto;
     position: relative;
     top: 30px;
-    border: 0.5px solid lightgrey;
+    border: 0.5px solid #dddddd;
+    margin-bottom: 75px;
 }
 
 .content {
@@ -136,11 +164,12 @@ grid {
     background-size: contain;
     background-repeat: round;
     border-radius: 3%;
-
+    transition-duration: 100ms;
 }
 
 .project:hover {
-    border: 4px solid #47ACA7;
+    border: 4px solid white;
+    border-radius: 4%;
 }
 
 .A {
@@ -162,7 +191,7 @@ grid {
 /* IDS */
 
 #p1 {
-    width: 78%;
+    width: 75%;
     margin-left: 20px; 
  
  }
@@ -170,3 +199,49 @@ grid {
  #message {
      height: 150px; 
  }
+
+ @media only screen and (max-width: 800px) {
+    .headerContent {
+        width: 100%;
+    }
+
+    .name {
+        width: 100%;
+        float: none;
+    }
+    .page {
+        width: 100%;
+        top: 0;
+        background-image: url("../images/background.png");
+    }
+    header {
+        height: 140px;
+    }
+
+    .nav {
+        float: none;
+        width: 100%;
+        text-align: center;
+        background-image: url("../images/background.png");
+    }
+
+    .content h1 {
+        text-align: center;
+    }
+    img {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #p1 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+        grid-gap: 20px;
+    }
+}
