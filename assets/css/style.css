@@ -231,7 +231,7 @@ footer p {
     img {
         display: block;
         width: 50%;
-        margin: 0 auto;
+        margin: 15px auto 10px auto;
     }
 
     #p1 {
@@ -243,5 +243,13 @@ footer p {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 250px);
         grid-gap: 20px;
+    }
+
+    hr {
+        display:none;
+    }
+
+    .content {
+        margin-top: 15px;
     }
 }
