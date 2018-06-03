@@ -33,6 +33,8 @@ var startGame = function() {
     randomWord();
     matchImage();
     generateBlanks();
+    document.getElementById("letters").textContent = usedLetters.join(" ").toUpperCase();
+    document.getElementById("guesses").textContent = guesses;
 }
 
 startGame();
